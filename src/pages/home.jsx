@@ -2,8 +2,7 @@
 
 
 import { Herogrid } from '../components/herogrid'
-import { FlashSales } from '../components/flash-sales'
-import { Categories } from '../components/categories'
+
 
 
 import { SiteDetails } from '../components/site-details'
