@@ -18,7 +18,7 @@ export const DesktopCategoryMenu = () => {
 						</a>
 					))}
 			</div>
-			<div className="overflow-hidden mt-3 rounded-sm">
+			<div className="overflow-hidden my-3 rounded-sm">
 				<img src={deal1} alt="ads" />
 			</div>
 			</div>

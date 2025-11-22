@@ -29,7 +29,7 @@ export default function Product() {
 				<div className="col-span-12 sm:col-span-6 rounded-lg flex flex-col gap-2">
 					<div className="bg-white p-2">
 						<img src={hoodie} alt="image" />
-						<h4 className="uppercase font-semibold text-lg">
+						<h4 className="uppercase font-semibold text-lg mt-4">
 							Aeon Fan 18 40W Rechargeable
 						</h4>
 						<h1 className="font-semibold text-lg ">#64,000</h1>

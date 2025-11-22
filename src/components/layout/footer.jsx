@@ -50,7 +50,7 @@ export const Footer = () => {
 					</div>
 				</div>
 				<div className="w-full bg-zinc-900 h-10 text-white mx-auto p-2 items-center justify-center flex">
-					<h4>Develop by Runetech (Chuddi) with Grit @2025</h4>
+					<h4 className="text-sm text-zinc-400">Developed by Runetech (Chuddi) with Grit @2025</h4>
 				</div>
 			</section>
 		);

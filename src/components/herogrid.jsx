@@ -1,5 +1,5 @@
 import React from 'react'
-
+import banner1 from "../assets/banner1.png"
 
 import billboard from "../assets/dill2.jpg"
 import { categories } from '../constant';
@@ -7,22 +7,19 @@ import { categories } from '../constant';
 export const Herogrid = () => {
 
   return (
-		<div className='w-full'>
+		<div className="w-full">
 			{/* MOBILE CATEGORY */}
 			<MobileCategoriesMenu />
 
 			<section className="w-full rounded-lg p-2 my-2 md:h-full  mx-auto relative">
 				<div className="flex flex-col md:grid md:grid-cols-12 md:grid-rows-4 h-full w-full md:gap-4 relative">
-					
-					
-
 					{/* BANNER  */}
 
 					<div className="md:col-span-12 row-span-4 w-full text-white rounded-lg bg-white p-2">
 						<div className="grid h-full grid-cols-12 gap-2 grid-row-4">
-							<div className="col-span-7  md:row-span-4 h-full">
+							<div className="col-span-8  md:row-span-4 h-[100%]">
 								<img
-									src={`${billboard}`}
+									src={`${banner1}`}
 									alt="billboard"
 									className="rounded-lg"
 									style={{
@@ -31,32 +28,28 @@ export const Herogrid = () => {
 										height: "100%",
 										width: "100%",
 									}}
-								/>
+							  />
+							
 							</div>
 
 							{/* SIDE BANNERS */}
 
-							<div className="col-span-5 grid  md:row-span-4 h-full gap-2">
-								<div className="bg-orange-500 md:row-span-2 h-full rounded-md">
-									post1
+							<div className="col-span-4 grid  md:row-span-4 h-full gap-2">
+								<div className=" md:row-span-2 h-full rounded-md">
+									<img src={banner1} alt="billboard" className="rounded-lg" />
 								</div>
-								<div className="bg-pink-500 md:row-span-2 h-full rounded-md">
-									post@
+								<div className=" md:row-span-2 h-full rounded-md">
+									<img src={billboard} alt="" className="rounded-lg" />
 								</div>
 							</div>
 						</div>
-          </div>
-          
-
-          
+					</div>
 				</div>
 			</section>
 
 			<section className="p-4 ">
 				{/* GOOD DEALS AND COMMISSIONS */}
-				<div className="flex bg-white py-2 px-3 gap-2 overflow-x-auto rounded-sm">
-					
-				</div>
+				<div className="flex bg-white py-2 px-3 gap-2 overflow-x-auto rounded-sm"></div>
 			</section>
 		</div>
 	);
