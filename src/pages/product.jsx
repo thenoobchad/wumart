@@ -32,9 +32,9 @@ export default function Product() {
 						<h4 className="uppercase font-semibold text-lg mt-4">
 							Aeon Fan 18 40W Rechargeable
 						</h4>
-						<h1 className="font-semibold text-lg ">#64,000</h1>
+						<h1 className="font-semibold text-lg ">₦ 64,000</h1>
 						<p className="font-semibold text-sm text-zinc-500 line-through mb-4">
-							#95,000
+							₦ 95,000
 						</p>
 						<div className="flex gap-4 mb-4">
 							<span>Quantity:</span>

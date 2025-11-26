@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ProductDescription = ({product}) => {
+export const ProductDescription = () => {
   return (
     <div className=' mt-20'>
       <div className="flex gap-3 mb-4">

@@ -1,35 +1,28 @@
-import React, { useContext, useState } from 'react'
-import { BiCart, BiHelpCircle, BiUser } from 'react-icons/bi'
+import React, { useContext, useState } from "react";
+import { BiCart, BiHelpCircle, BiUser } from "react-icons/bi";
 
-import { FaSearch } from 'react-icons/fa'
-import { FiPackage } from 'react-icons/fi'
-import { GrCart } from 'react-icons/gr'
-import { TbLogout } from 'react-icons/tb'
+import { FaSearch } from "react-icons/fa";
+import { FiPackage } from "react-icons/fi";
+import { GrCart } from "react-icons/gr";
+import { TbLogout } from "react-icons/tb";
 
-import  {Link, useNavigate} from "react-router-dom"
-import { ShopContext } from '../../context/ShopContext'
+import { Link } from "react-router-dom";
+import { ShopContext } from "../../context/ShopContext";
+import { useAuth } from "../../context/AuthContext";
 
 export const Header = () => {
-  const { token, setToken, getTotalCartItems } = useContext(ShopContext)
+	const { getTotalCartItems } = useContext(ShopContext);
 
+	const { user } = useAuth();
 
-  const [isActive, setIsActive] = useState(false)
-const navigate = useNavigate()
+	const [isActive, setIsActive] = useState(false);
 
-  const handleClick = () => {
-    setIsActive(!isActive)
-  }
+	const handleClick = () => {
+		setIsActive(!isActive);
+	};
 
-
-  const logout = () => { 
-    localStorage.removeItem("token")
-    setToken("");
-    navigate("/")
-  }
-  
-  return (
-		<header
-			className="bg-white flex flex-col w-full  border border-zinc-300 sticky top-0 right-0 z-10">
+	return (
+		<header className="bg-white flex flex-col w-full  border border-zinc-300 sticky top-0 right-0 z-10">
 			<div className="grid grid-flow-dense grid-cols-12 w-full max-w-6xl mx-auto h-28 md:h-20 items-center px-4">
 				{/* title */}
 				<div className="col-span-6 md:col-span-2 flex items-center md:justify-center gap-4">
@@ -72,8 +65,11 @@ const navigate = useNavigate()
 						{isActive && (
 							<div className="absolute top-10 -left-15 sm:-left-8 w-[150px] bg-white border rounded-md border-zinc-100 z-1000">
 								<ul className="flex flex-col">
-									{token ? (
+									{user ? (
 										<>
+											<p className="text-sm  mt-3 mb-2 px-4 capitalize">
+												Hi {user?.name}
+											</p>
 											<Link
 												to="/myorders"
 												className="text-sm px-4 py-2  hover:bg-green-100 flex gap-2 items-center">
@@ -83,9 +79,7 @@ const navigate = useNavigate()
 												Orders
 											</Link>
 
-											<p
-												onClick={() => logout()}
-												className="text-sm px-4 py-2 hover:bg-green-100 flex gap-2 items-center">
+											<p className="text-sm px-4 py-2 hover:bg-green-100 flex gap-2 items-center">
 												<TbLogout />
 												Log Out
 											</p>
@@ -125,4 +119,4 @@ const navigate = useNavigate()
 			</div>
 		</header>
 	);
-}
+};
